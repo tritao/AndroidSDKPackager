@@ -1,0 +1,18 @@
+language: shell
+
+os:
+- osx
+- windows
+- linux
+
+script: |
+  ./run.sh
+
+deploy:
+  provider: releases
+  api_key:
+      secure: "ht+AzSwH38SKqn7RbzIOvt1MHjVAuvkC2vjcgHbC7ORSI4ZRnflbeinphQjGL/qfD0Z3M+N1RUD/fM7+ApYDrJevrNJ1M2jw0dbIL70CMuIh6Bi1vZWh9w4aoISV9Yib1bcP0U3fDtHFfl3eao33PrNnQjB0oC10ahY9JpreJWkyWBfQdo1OeJANLuxy9cEotoMSRY1XeNiOeMV4d7fTfk78PqWJn6p+SbM5a/zSm+NaPkpWACt4B0RjFtH4VBtrC2Y3+BgBn9YU2Zo03MkBbWekosv82qHeiZpQPG1Kp69aJShkMhpf9lleFjgt3V1Qjbymya16Uxb63ybS3Itl89EJwYn67z6sq+rPbnrfzYdYwJzvAr304WtRmL5/zkC0XtwRF1P8unXFguZmdJOFXxMZThdR7VHqeulUAjkiw+XYaivKAKuQYL0IdVeb25WREU4aM4Ke5efPclrpv5ZL2aZD5nUyAYkqzXQfG0xAmVv77nm1POEYku2kRmJ/yjwgwYi201LwbJpEpx5Cr6R+dNMwbpJTHTD4z8C9qTrxjqx5xnNUjz5kP/g02ciihSqYlQnEuKCErwkwwsFYgAhkBvPxCJ79D19BpHgc1lEAQaTJ+MC7ta88JroD7iYC/jUwobreqw6jijH97GdFQ5kumhOI/KH0gOwMIdO3aW2V17w="
+  file_glob: true
+  file: "*.tar.xz"
+  skip_cleanup: true
+  name: "Android SDKs"
